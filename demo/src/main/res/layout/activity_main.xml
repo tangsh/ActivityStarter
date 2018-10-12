@@ -31,8 +31,22 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:onClick="openActivity2"
+            android:text="打开 Activity1"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="openActivity2"
             android:text="打开 Activity2"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="openActivity1ForResult"
+            android:text="打开 Activity1，并加返回结果回调"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
