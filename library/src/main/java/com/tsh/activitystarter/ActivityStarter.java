@@ -120,6 +120,10 @@ public class ActivityStarter {
 		return new ActivityStarter(fragment.getActivity());
 	}
 
+	public static ActivityStarter with(android.support.v4.app.Fragment fragment) {
+		return new ActivityStarter(fragment.getActivity());
+	}
+
 	public ActivityStarter setIntent(Intent intent) {
 		this.intent = intent;
 		return this;
