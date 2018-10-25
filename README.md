@@ -38,7 +38,7 @@ allprojects {
 * 项目 build.gradle
 
 ```
-compile 'com.github.tangsh:ActivityStarter:v1.1.0'
+compile 'com.github.tangsh:ActivityStarter:v1.2.0'
 ```
 
 
