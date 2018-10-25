@@ -9,10 +9,10 @@ import java.lang.ref.WeakReference;
 
 class InternalFragment extends Fragment {
 
-	private WeakReference<OnResultListener> weakReferenceListener;
+	private OnResultListener onResultListener;
 
 	void setOnResultListener(OnResultListener listener) {
-		this.weakReferenceListener = new WeakReference<>(listener);
+		this.onResultListener = listener;
 	}
 
 	@Override
@@ -27,10 +27,9 @@ class InternalFragment extends Fragment {
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-		if (ActivityStarter.INTERNAL_REQUEST_CODE == requestCode && weakReferenceListener.get() != null
+		if (ActivityStarter.INTERNAL_REQUEST_CODE == requestCode && this.onResultListener != null
 				&& (getActivity() != null && !getActivity().isFinishing())) {
-
-			weakReferenceListener.get().onActivityResult(resultCode, data);
+			this.onResultListener.onActivityResult(resultCode, data);
 		}
 	}
 
